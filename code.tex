@@ -1,0 +1,66 @@
+\documentclass{code}
+\usepackage{fouriernc}
+\usepackage{todonotes}
+\usepackage{lineno}
+\usepackage{xspace}
+\usepackage{soul}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{graphicx}
+\input{vc}
+
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{1}
+
+%\newcommand{\temp}[1]{{\color{red} #1}}
+\newcommand{\temp}[1]{\ul{\bf #1}\todo{TBD}\xspace}
+
+%\addtolength{\parskip}{\baselineskip}
+
+\rhead{\thepage}
+\chead{\qquad\qquad Article \Roman{article}}
+\lhead{MSA Compiled Code}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+
+\begin{document}
+	\renewcommand{\thepage}{\roman{page}}
+	\title{Michigan Student Assembly Compiled Code (draft) \\
+			\large \includegraphics[width=5in]{2008_msa_color_logo} \\
+			Revision  \\
+			{\tt commit \GITAbrHash} \\
+			Ratified: 28 Mar 2010}
+	\author{\line(1,0){175} \\
+			Michael L.~Benson \\
+			Rules \& Elections Committee Chair
+				\and
+			\line(1,0){175} \\
+			James E.~Brusstar \\
+			Student General Counsel}
+	\date{}
+	\maketitle
+	\tableofcontents
+	\newpage
+
+	\renewcommand{\thepage}{\arabic{page}}
+	\setcounter{page}{1}
+	\pagestyle{fancy}
+	\headheight 35pt
+	\thispagestyle{empty}
+	\linenumbers
+
+	\input{article1}
+	
+	\input{article2}
+	
+	\input{article3}
+	
+	\input{article4}
+	
+	\input{article5}
+	
+	\input{article6}
+	
+	\input{article7}
+\end{document}
